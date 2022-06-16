@@ -43,7 +43,7 @@ This page covers some different questions and categories an SRE might be expecte
     - [What are docker images?](#what-are-docker-images)
     - [What can you tell about Docker Compose?](#what-can-you-tell-about-docker-compose)
     - [Differentiate between COPY and ADD commands that are used in a Dockerfile?](#differentiate-between-copy-and-add-commands-that-are-used-in-a-dockerfile)
-    - [Can you tell the difference between CMD and ENTRYPOINT?](#can-you-tell-the-difference-between-cmd-and-entrypoint)
+    - [Can you explain the difference between CMD and ENTRYPOINT?](#can-you-explain-the-difference-between-cmd-and-entrypoint)
     - [How would you download a remote docker image to your machine](#how-would-you-download-a-remote-docker-image-to-your-machine)
     - [How do you create a docker container from an image?](#how-do-you-create-a-docker-container-from-an-image)
     - [How would you connect to a running container](#how-would-you-connect-to-a-running-container)
@@ -263,7 +263,7 @@ They are executable packages(bundled with application code & dependencies, softw
 - Both the commands have similar functionality, but COPY is more preferred because of its higher transparency level than that of ADD.
 - COPY provides just the basic support of copying local files into the container whereas ADD provides additional features like remote URL and tar extraction support.
 
-### Can you tell the difference between CMD and ENTRYPOINT?
+### Can you explain the difference between CMD and ENTRYPOINT?
 
 - CMD command provides executable defaults for an executing container. In case the executable has to be omitted then the usage of ENTRYPOINT instruction along with the JSON array format has to be incorporated.
 - ENTRYPOINT specifies that the instruction within it will always be run when the container starts.
