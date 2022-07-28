@@ -21,14 +21,18 @@ https://stackoverflow.com/questions/28349392/how-to-push-a-docker-image-to-a-pri
 
 1. Docker images are typically large because they are comprised of multiple layers
 1. You can try to chain commands together to reduce the number of layers
-  `RUN apt update`
-  `RUN apt -y install curl`
-  `RUN apt -y install python3`
-  `RUN apt -y install vim`
-  = 4 layers
-  vs
-  `RUN apt update && apt -y install curl python3 vim`
-  = 1 layer
+
+    ```Dockerfile
+    RUN apt update
+    RUN apt -y install curl
+    RUN apt -y install python3
+    RUN apt -y install vim
+    ```
+
+    = 4 layers
+    vs
+    `RUN apt update && apt -y install curl python3 vim`
+    = 1 layer
 
 1. Another option is to use multi-stage builds
 
